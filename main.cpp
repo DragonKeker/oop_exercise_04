@@ -2,7 +2,7 @@
 #include "templates.h"
 #include "point.h"
 #include "figures.h"
-
+#include <vector>
 
 int main() {
 	char option = '0';
@@ -38,8 +38,14 @@ int main() {
 			figures<std::tuple<point<double>>>(std::cin, std::cout);
 			break;
 		}
-
+		case '5': {
+			std::cout << is_proper<std::string, char*>::value << std::endl;
+			std::cout << is_proper<float, int>::value << std::endl;
+			std::cout << is_proper<char, std::vector < double>>::value << std::endl;
+			return 0;
 		}
+		}
+		return 0;
 	}
-	return 0;
 }
+// if constexpr  на ввод 2 клаcса u и v и u можно cоздать из экземпляра класса v
