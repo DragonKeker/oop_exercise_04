@@ -90,7 +90,15 @@ double tuple_area(const T& object) {
 		return res + tuple_area<Id + 1>(object);
 	}
 }
+////
+template<class U, class V, class = void>
+struct is_proper : std::false_type {};
 
+template<class U, class V>
+struct is_proper <U, V, 
+	   std::void_t<decltype(U(std::declval<const V&>())) >
+       > : std::true_type {};
+////
 template <class T>
 double area(const T& object) {
 	double res = 0.0;
@@ -110,5 +118,6 @@ double area(const T& object) {
 		throw std::logic_error("ERROR! Perhaps tuple is incorrect");
 	}
 }
+
 
 #endif 
