@@ -39,9 +39,9 @@ int main() {
 			break;
 		}
 		case '5': {
-			std::cout << is_proper<std::string, char*>::value << std::endl;
-			std::cout << is_proper<float, int>::value << std::endl;
-			std::cout << is_proper<char, std::vector < double>>::value << std::endl;
+			std::cout << is_ok<std::string, char*>::value << std::endl;
+			std::cout << is_ok<float, int>::value << std::endl;
+			std::cout << is_ok<char, std::vector < double>>::value << std::endl;
 			return 0;
 		}
 		}
