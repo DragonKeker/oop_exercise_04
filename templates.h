@@ -92,10 +92,10 @@ double tuple_area(const T& object) {
 }
 ////
 template<class U, class V, class = void>
-struct is_proper : std::false_type {};
+struct is_ok : std::false_type {};
 
 template<class U, class V>
-struct is_proper <U, V, 
+struct is_ok <U, V, 
 	   std::void_t<decltype(U(std::declval<const V&>())) >
        > : std::true_type {};
 ////
