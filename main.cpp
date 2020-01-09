@@ -19,7 +19,8 @@ int main() {
 			std::cout << "1) triangle" << '\n'
 				<< "2) hexagon" << '\n'
 				<< "3) octagon" << '\n'
-				<< "4) tuple" << std::endl;
+				<< "4) tuple" << '\n'
+				<< "5) dop" << std::endl;
 			break;
 		}
 		case '1': {
@@ -42,10 +43,8 @@ int main() {
 			std::cout << is_ok<std::string, char*>::value << std::endl;
 			std::cout << is_ok<float, int>::value << std::endl;
 			std::cout << is_ok<char, std::vector < double>>::value << std::endl;
-			return 0;
 		}
 		}
-		return 0;
 	}
+	return 0;
 }
-// if constexpr  на ввод 2 клаcса u и v и u можно cоздать из экземпляра класса v
